@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 79e066eb1a557a745b9fbd33e1419c96
+guid: 74bda848032c72749b5159aabab07edc
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -30,7 +30,7 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 0
+    spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 32
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638691288841845028
+  platformSettingsDirtyTick: 638691288700817958
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: IconHolderWhite
+  - name: IconHolderCutted
     originalName: 
-    pivot: {x: 0.49999997, y: -0.045454547}
+    pivot: {x: 0.49999997, y: 0}
     alignment: 9
-    border: {x: 14, y: 10, z: 14, w: 10}
+    border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
       width: 46
-      height: 22
-    spriteID: a77d218b57d14894db34373cde416bbe
+      height: 23
+    spriteID: 6afdfd2b07bc1594fa15441a430cc37b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,21 +142,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1195717710
-    name: IconHolderWhite
+    guid: 1869654980
+    name: IconHolderCutted
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: IconHolderWhite
+    - name: IconHolderCutted
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 1
-        y: 1
+        y: 0
         width: 46
-        height: 22
-      spriteId: a77d218b57d14894db34373cde416bbe
+        height: 23
+      spriteId: 6afdfd2b07bc1594fa15441a430cc37b
     linkedCells: []
     parentIndex: -1
   platformSettings:
