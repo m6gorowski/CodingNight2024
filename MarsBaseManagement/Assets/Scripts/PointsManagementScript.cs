@@ -14,31 +14,54 @@ public class PointsManagementScript : MonoBehaviour
     private TextMeshProUGUI oilScoreText;
     [SerializeField]
     private TextMeshProUGUI energyScoreText;
+    public class ResourceData
+    {
+        public string resourceName; // Name of the resource (e.g., "Water")
+        public float points; // Current points
+        public float multiplier; // Multiplier for gaining points
+        public int upgradeLevel; // Level of the upgrade
 
-    private float _waterScore;    
-    private float _oxygenScore;
-    private float _oilScore;
-    private float _energyScore;
+        // Constructor
+        public ResourceData(string name, float initialPoints, float initialMultiplier, int initialUpgradeLevel)
+        {
+            resourceName = name;
+            points = initialPoints;
+            multiplier = initialMultiplier;
+            upgradeLevel = initialUpgradeLevel;
+        }
+    }
+    public ResourceData waterResource;
+    public ResourceData oxygenResource;
+    public ResourceData oilResource;
+    public ResourceData energyResource;
 
-
-
+    public List<ResourceData> resources;
     void Start()
     {
-        _waterScore = 0f;
-        _oxygenScore = 0f;
-        _oilScore = 0f;
-        _energyScore = 0f;
+        resources = new List<ResourceData>();
+        waterResource = new ResourceData("Water", 0f, 1f, 0);
+        oxygenResource = new ResourceData("Oxygen", 0f, 0f, 0);
+        oilResource = new ResourceData("Oil", 0f, 0f, 0);
+        energyResource = new ResourceData("Energy", 0f, 0f, 0);
+        resources.Add(waterResource);
+        resources.Add(oxygenResource);
+        resources.Add(oilResource);
+        resources.Add(energyResource);
+
     }
     void Update()
     {
-        waterScoreText.text = _waterScore.ToString();
-        oxygenScoreText.text = _oxygenScore.ToString();
-        oilScoreText.text = _oilScore.ToString();
-        energyScoreText.text = _energyScore.ToString();
+        waterScoreText.text = waterResource.points.ToString();
+        oxygenScoreText.text = oxygenResource.points.ToString();
+        oilScoreText.text = oilResource.points.ToString();
+        energyScoreText.text = energyResource.points.ToString();
     }
 
     public void ClickAction()
     {
-        _waterScore += 1;
+        foreach(ResourceData resource in resources)
+        {
+            resource.points += resource.multiplier;
+        }
     }
 }

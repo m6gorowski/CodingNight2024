@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8259e81f9cd694b4a8ed0f7d319bfd79
+guid: ca42cb0443c8c6d41bfa75d3309f0fe4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Moon02
+  - name: Base001
     originalName: 
-    pivot: {x: 0.511628, y: -0.071428575}
+    pivot: {x: 0.45454547, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 43
-      height: 42
-    spriteID: 6b82ca57292de6d43808d581f3e74330
+      width: 44
+      height: 37
+    spriteID: f1333588dac1f5d45be6ae91d845b299
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,21 +142,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1124621951
-    name: Moon02
+    guid: 1857692098
+    name: Base001
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Moon02
+    - name: Base001
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: 3
-        width: 43
-        height: 42
-      spriteId: 6b82ca57292de6d43808d581f3e74330
+        x: 4
+        y: 0
+        width: 44
+        height: 37
+      spriteId: f1333588dac1f5d45be6ae91d845b299
     linkedCells: []
     parentIndex: -1
   platformSettings:
