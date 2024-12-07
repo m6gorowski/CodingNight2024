@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: e3cd552ada4a1d54a8a9d549a579a161
+=======
 guid: 43dadb3c15f241e4da7726444d8c03ba
+>>>>>>> e429475fec1b467d4167e4a3a46d649b3a17f672
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -30,10 +34,17 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
+<<<<<<< HEAD
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+=======
     spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 32
+>>>>>>> e429475fec1b467d4167e4a3a46d649b3a17f672
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +106,11 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
+<<<<<<< HEAD
+  platformSettingsDirtyTick: 0
+=======
   platformSettingsDirtyTick: 638691290675821306
+>>>>>>> e429475fec1b467d4167e4a3a46d649b3a17f672
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,14 +138,22 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
+<<<<<<< HEAD
+    border: {x: 0, y: 0, z: 0, w: 0}
+=======
     border: {x: 15, y: 3, z: 14, w: 19}
+>>>>>>> e429475fec1b467d4167e4a3a46d649b3a17f672
     rect:
       serializedVersion: 2
       x: 4
       y: 4
       width: 46
       height: 23
+<<<<<<< HEAD
+    spriteID: b820b5a2b8042294e94abbf475620114
+=======
     spriteID: a09fd9f530c610f43b0839a82e1bb233
+>>>>>>> e429475fec1b467d4167e4a3a46d649b3a17f672
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -156,7 +179,11 @@ ScriptedImporter:
         y: 0
         width: 46
         height: 23
+<<<<<<< HEAD
+      spriteId: b820b5a2b8042294e94abbf475620114
+=======
       spriteId: a09fd9f530c610f43b0839a82e1bb233
+>>>>>>> e429475fec1b467d4167e4a3a46d649b3a17f672
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -171,6 +198,8 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
+=======
   - name: DefaultTexturePlatform
     overridden: 0
     maxTextureSize: 2048
@@ -204,6 +233,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+>>>>>>> e429475fec1b467d4167e4a3a46d649b3a17f672
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
