@@ -73,10 +73,10 @@ public class PointsManagementScript : MonoBehaviour
     void Start()
     {
         resources = new List<ResourceData>();
-        waterResource = new ResourceData("Water", 0f, 0.1f, 0);
-        oxygenResource = new ResourceData("Oxygen", 0f, 0f, 0);
-        oilResource = new ResourceData("Oil", 0f, 0f, 0);
-        energyResource = new ResourceData("Energy", 0f, 0f, 0);
+        waterResource = new ResourceData("Water", 0, 0.1f, 0);
+        oxygenResource = new ResourceData("Oxygen", 0, 0f, 0);
+        oilResource = new ResourceData("Oil", 0, 0f, 0);
+        energyResource = new ResourceData("Energy", 0, 0f, 0);
         resources.Add(waterResource);
         resources.Add(oxygenResource);
         resources.Add(oilResource);
@@ -84,9 +84,9 @@ public class PointsManagementScript : MonoBehaviour
 
         waterUpgrades = new List<Upgrade>
         {
-            new Upgrade("New Water Filter", 1, new Dictionary<string, float> { { "H20", 0.7f } }, 0.1f, "New Water Filter", upgradePrefab, resourceIcons[0]),
-            new Upgrade("New Pump System", 2, new Dictionary<string, float> { { "H20", 5f }, { "Oil", 3f } }, 0.3f, "New Pump System", upgradePrefab, resourceIcons[0]),
-            new Upgrade("New Pipes", 3, new Dictionary<string, float> { { "H20", 15f }, { "Oil", 5f } }, 0.5f, "New Pipes", upgradePrefab, resourceIcons[0])
+            new Upgrade("New Water Filter", 1, new Dictionary<string, float> { { "Water", 0.7f } }, 0.1f, "New Water Filter", upgradePrefab, resourceIcons[0]),
+            new Upgrade("New Pump System", 2, new Dictionary<string, float> { { "Water", 5f }, { "Oil", 3f } }, 0.3f, "New Pump System", upgradePrefab, resourceIcons[0]),
+            new Upgrade("New Pipes", 3, new Dictionary<string, float> { { "Water", 15f }, { "Oil", 5f } }, 0.5f, "New Pipes", upgradePrefab, resourceIcons[0])
         };
 
         PopulateUpgradeScrollView();
@@ -112,33 +112,60 @@ public class PointsManagementScript : MonoBehaviour
     }
     private void PopulateUpgradeScrollView()
     {
-        foreach (List<Upgrade> upgradeList in new List<List<Upgrade>> { waterUpgrades, oxygenUpgrades, oilUpgrades, energyUpgrades })
+        // Loop through each resource and its respective upgrade list
+        List<(ResourceData resource, List<Upgrade> upgrades)> resourceUpgradePairs = new List<(ResourceData, List<Upgrade>)>
         {
-            // Loop through all upgrades in the list (e.g., waterUpgrades)
-            foreach (Upgrade upgrade in waterUpgrades)
+            (waterResource, waterUpgrades),
+            (oxygenResource, oxygenUpgrades),
+            (oilResource, oilUpgrades),
+            (energyResource, energyUpgrades)
+        };
+
+        // Loop through each resource and upgrade list
+        foreach (var resourceUpgradePair in resourceUpgradePairs)
+        {
+            ResourceData resource = resourceUpgradePair.resource;
+            List<Upgrade> upgrades = resourceUpgradePair.upgrades;
+
+            // Loop through the upgrades of the current resource
+            foreach (Upgrade upgrade in upgrades)
             {
-                // Instantiate the prefab
-                GameObject upgradeInstance = Instantiate(upgrade.prefab, scrollView.content);
-                Transform backgroundImage = upgradeInstance.transform.Find("BackgroundImage");
-                // Set the icon image
-                Image resourceImage = backgroundImage.transform.Find("ResourceImage").GetComponent<Image>();
-                resourceImage.sprite = upgrade.icon;
-
-                // Set the cost text
-                TextMeshProUGUI costText = backgroundImage.transform.Find("BuyButton").GetComponentInChildren<TextMeshProUGUI>();
-
-                foreach (var resourceCost in upgrade.cost)
+                // Only display the upgrade that matches the next level
+                if (upgrade.level == resource.upgradeLevel + 1) // Show only the next level upgrade
                 {
-                    costText.text += resourceCost.Key + ": " + resourceCost.Value + " ";
-                }
+                    // Instantiate the upgrade prefab
+                    GameObject upgradeInstance = Instantiate(upgrade.prefab, scrollView.content);
+                    Transform backgroundImage = upgradeInstance.transform.Find("BackgroundImage");
 
-                // Set the description text
-                TextMeshProUGUI descriptionText = backgroundImage.transform.Find("Description").GetComponent<TextMeshProUGUI>();
-                descriptionText.text = upgrade.description;
+                    // Set the icon image
+                    Image resourceImage = backgroundImage.transform.Find("ResourceImage").GetComponent<Image>();
+                    resourceImage.sprite = upgrade.icon;
+
+                    // Set the cost text
+                    TextMeshProUGUI costText = backgroundImage.transform.Find("BuyButton").GetComponentInChildren<TextMeshProUGUI>();
+                    costText.text = "Cost: ";
+                    foreach (var resourceCost in upgrade.cost)
+                    {
+                        costText.text += resourceCost.Key + ": " + resourceCost.Value + " ";
+                    }
+
+                    // Set the description text
+                    TextMeshProUGUI descriptionText = backgroundImage.transform.Find("Description").GetComponent<TextMeshProUGUI>();
+                    descriptionText.text = upgrade.description;
+
+                    // Find the buy button in the instantiated prefab and add the onClick listener
+                    Button buyButton = backgroundImage.transform.Find("BuyButton").GetComponent<Button>();
+
+                    // Ensure that the button triggers the correct method
+                    buyButton.onClick.RemoveAllListeners(); // Clear any existing listeners to prevent duplicates
+                    buyButton.onClick.AddListener(() => BuyUpgrade(upgrade, resource)); // Add the new listener
+                    
+                }
             }
         }
-            
     }
+
+
     private void UpdateUpgradeUI()
     {
         // Loop through all upgrade lists
@@ -181,6 +208,40 @@ public class PointsManagementScript : MonoBehaviour
 
         // If the upgrade instance is not found, return null
         return null;
+    }
+
+    private void BuyUpgrade(Upgrade upgrade, ResourceData resource)
+    {
+        // Check if player has enough resources to buy the upgrade
+        foreach (var resourceCost in upgrade.cost)
+        {
+            string resourceName = resourceCost.Key;
+            float cost = resourceCost.Value;
+
+            // Find the resource data based on the resource name
+            ResourceData playerResource = resources.First(r => r.resourceName == resourceName);
+            if (playerResource.points < cost)
+            {
+                Debug.Log("Not enough " + resourceName + " to buy this upgrade.");
+                return; // Exit if not enough resources
+            }
+        }
+
+        // Deduct the cost from the player's resources
+        foreach (var resourceCost in upgrade.cost)
+        {
+            string resourceName = resourceCost.Key;
+            float cost = resourceCost.Value;
+            ResourceData playerResource = resources.First(r => r.resourceName == resourceName);
+            playerResource.points -= cost;
+        }
+
+        // Upgrade has been purchased, so increment the resource's upgrade level
+        resource.upgradeLevel++;
+
+        // Now, update the scroll view to show the next level upgrade
+        PopulateUpgradeScrollView();
+        UpdateUpgradeUI();
     }
 
 }
