@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Base000
     originalName: 
-    pivot: {x: 0.45454547, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 44
-      height: 37
+      width: 180
+      height: 320
     spriteID: 2893317df153d2a4285b447afa0f5487
     spriteBone: []
     spriteOutline: []
@@ -152,10 +152,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 4
+        x: 0
         y: 0
-        width: 44
-        height: 37
+        width: 180
+        height: 320
       spriteId: 2893317df153d2a4285b447afa0f5487
     linkedCells: []
     parentIndex: -1
@@ -207,4 +207,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 48, y: 48}
+  canvasSize: {x: 180, y: 320}
