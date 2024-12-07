@@ -119,6 +119,34 @@ public class PointsManagementScript : MonoBehaviour
         energyScoreText.text = energyResource.points.ToString();
     }
 
+    void CheckIfCanUpdate()
+    {
+        int WaterLevel = waterResource.upgradeLevel;
+        if (WaterLevel == 1)
+        {
+            Image imageComponent = GameObject.Find("MenuCanvas/MainPanel/MainBase/Image").GetComponent<Image>();
+
+            if (imageComponent != null)
+            {
+
+                Sprite newSprite = Resources.Load<Sprite>("Base001");
+
+                if (newSprite != null)
+                {
+                    imageComponent.sprite = newSprite;  
+                }
+                else
+                {
+                    Debug.LogError("Sprite 'Base001' not found in Resources folder!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Image component not found!");
+            }
+        }
+    }
+
     public void ClickAction()
     {
         foreach(ResourceData resource in resources)
@@ -301,6 +329,7 @@ public class PointsManagementScript : MonoBehaviour
             canvasGroup.interactable = false; // Disable interaction
             canvasGroup.blocksRaycasts = false; // Disable interaction with the UI
         }
+        CheckIfCanUpdate();
 
         // Now, update the scroll view to show the next level upgrade
         PopulateUpgradeScrollView();
