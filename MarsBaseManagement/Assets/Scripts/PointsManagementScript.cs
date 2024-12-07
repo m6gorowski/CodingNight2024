@@ -93,7 +93,7 @@ public class PointsManagementScript : MonoBehaviour
             new Upgrade("Oxygen Purification", 1, new Dictionary<string, float> { { "Water", 40f } }, 0.1f, "Oxygen Purification", upgradePrefab, resourceIcons[1]),
             new Upgrade("New Pump System", 2, new Dictionary<string, float> { { "Water", 35f }, { "Energy", 10f } }, 0.3f, "New Pump System", upgradePrefab, resourceIcons[1])
         };
-        oxygenUpgrades = new List<Upgrade>
+        energyUpgrades = new List<Upgrade>
         {
             new Upgrade("Batteries", 1, new Dictionary<string, float> { { "Water", 10f }, { "Oxygen", 4f } }, 0.1f, "Batteries", upgradePrefab, resourceIcons[2]),
             new Upgrade("Solar Panels", 2, new Dictionary<string, float> { { "Water", 15f }, { "Oxygen", 10f }, {"Energy", 5f } }, 0.3f, "Solar Panels", upgradePrefab, resourceIcons[2])
@@ -113,10 +113,10 @@ public class PointsManagementScript : MonoBehaviour
     }
     void Update()
     {
-        waterScoreText.text = waterResource.points.ToString();
-        oxygenScoreText.text = oxygenResource.points.ToString();
-        oilScoreText.text = oilResource.points.ToString();
-        energyScoreText.text = energyResource.points.ToString();
+        waterScoreText.text =(Mathf.Round(waterResource.points * 10f) * 0.1f).ToString();
+        oxygenScoreText.text = (Mathf.Round(oxygenResource.points * 10f) * 0.1f).ToString();
+        oilScoreText.text = (Mathf.Round(oilResource.points * 10f) * 0.1f).ToString();
+        energyScoreText.text = (Mathf.Round(energyResource.points * 10f) * 0.1f).ToString();
     }
 
     public void ClickAction()
