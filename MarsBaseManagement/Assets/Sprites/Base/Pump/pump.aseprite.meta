@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2715dc19985536d48ac30ba394515c0d
+guid: 04326d0e61b0f1249b9dda2d2ebe3fe5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Pump02
+  - name: pump
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.55, y: -0.19148935}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 180
-      height: 320
-    spriteID: 19b8941c927eaa94096bf9ad03172469
+      width: 40
+      height: 47
+    spriteID: 44478ea47ccb3754d8d4f0740c06c274
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,21 +142,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1585065478
-    name: Pump02
+    guid: -357439272
+    name: pump
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Pump02
+    - name: pump
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 180
-        height: 320
-      spriteId: 19b8941c927eaa94096bf9ad03172469
+        x: 10
+        y: 9
+        width: 40
+        height: 47
+      spriteId: 44478ea47ccb3754d8d4f0740c06c274
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -174,4 +174,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 180, y: 320}
+  canvasSize: {x: 64, y: 64}
