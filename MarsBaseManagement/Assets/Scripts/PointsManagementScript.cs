@@ -84,14 +84,27 @@ public class PointsManagementScript : MonoBehaviour
 
         waterUpgrades = new List<Upgrade>
         {
-            new Upgrade("New Water Filter", 1, new Dictionary<string, float> { { "Water", 0.7f } }, 0.1f, "New Water Filter", upgradePrefab, resourceIcons[0]),
-            new Upgrade("New Pump System", 2, new Dictionary<string, float> { { "Water", 5f }, { "Oil", 3f } }, 0.3f, "New Pump System", upgradePrefab, resourceIcons[0]),
-            new Upgrade("New Pipes", 3, new Dictionary<string, float> { { "Water", 15f }, { "Oil", 5f } }, 0.5f, "New Pipes", upgradePrefab, resourceIcons[0])
+            new Upgrade("New Water Filter", 1, new Dictionary<string, float> { { "Water", 5f } }, 0.1f, "New Water Filter", upgradePrefab, resourceIcons[0]),
+            new Upgrade("New Pump System", 2, new Dictionary<string, float> { { "Water", 15f }, { "Oil", 3f } }, 0.3f, "New Pump System", upgradePrefab, resourceIcons[0]),
+            new Upgrade("New Pipes", 3, new Dictionary<string, float> { { "Water", 30f }, { "Oil", 8f } }, 0.3f, "New Pipes", upgradePrefab, resourceIcons[0])
         };
         oxygenUpgrades = new List<Upgrade>
         {
             new Upgrade("Oxygen Purification", 1, new Dictionary<string, float> { { "Water", 40f } }, 0.1f, "Oxygen Purification", upgradePrefab, resourceIcons[1]),
-            new Upgrade("New Pump System", 2, new Dictionary<string, float> { { "Water", 35f }, { "Oxygen", 10f } }, 0.3f, "New Pump System", upgradePrefab, resourceIcons[1])
+            new Upgrade("New Pump System", 2, new Dictionary<string, float> { { "Water", 35f }, { "Energy", 10f } }, 0.3f, "New Pump System", upgradePrefab, resourceIcons[1])
+        };
+        oxygenUpgrades = new List<Upgrade>
+        {
+            new Upgrade("Batteries", 1, new Dictionary<string, float> { { "Water", 10f }, { "Oxygen", 4f } }, 0.1f, "Batteries", upgradePrefab, resourceIcons[2]),
+            new Upgrade("Solar Panels", 2, new Dictionary<string, float> { { "Water", 15f }, { "Oxygen", 10f }, {"Energy", 5f } }, 0.3f, "Solar Panels", upgradePrefab, resourceIcons[2])
+        };
+        oilUpgrades = new List<Upgrade>
+        {
+            new Upgrade("Coal Mine", 1, new Dictionary<string, float> { { "Water", 20f }, { "Oxygen", 5f } }, 0.1f, "Coal Mine", upgradePrefab, resourceIcons[3]),
+            new Upgrade("Basic Oil Refining", 2, new Dictionary<string, float> { { "Water", 25f }, { "Oxygen", 10f }, { "Energy", 8f } }, 0.2f, "Basic Oil Refining", upgradePrefab, resourceIcons[3]),
+            new Upgrade("Oil Pumping", 3, new Dictionary<string, float> { { "Water", 50f } , { "Oxygen", 20f }, { "Oil", 20f }, { "Energy", 15f }}, 0.2f, "Oil Pumping", upgradePrefab, resourceIcons[3]),
+            new Upgrade("Mega Oil Refinery", 4, new Dictionary<string, float> { { "Water", 35f }, { "Oxygen", 10f }, { "Oil", 50f }, { "Energy", 45f } }, 0.5f, "Mega Oil Refinery", upgradePrefab, resourceIcons[3])
+
         };
 
         PopulateUpgradeScrollView();
@@ -292,8 +305,4 @@ public class PointsManagementScript : MonoBehaviour
         PopulateUpgradeScrollView();
         UpdateUpgradeUI();
     }
-
-
-
-
 }
