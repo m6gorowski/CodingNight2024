@@ -13,8 +13,9 @@ public class UpgradeStateScript : MonoBehaviour
     private Button _buyButton;
     [SerializeField]
     private string[] _buyButtonDesc;
-    [SerializeField]
-    private 
+
+    private Color _redButtonHue = new Color(238, 144, 97);
+    private Color _greenButtonHue = new Color(157, 238, 97);
 
     void Start()
     {

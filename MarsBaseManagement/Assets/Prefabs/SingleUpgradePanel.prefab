@@ -307,8 +307,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.3
-  m_fontSizeBase: 50.3
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -486,15 +486,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.73836017, b: 0.6367924, a: 1}
+  m_Color: {r: 0.9333334, g: 0.5647059, b: 0.3803922, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5400188643867210506, guid: 79e7d5ef26353054ea523b5572c9a7b3, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: -4220102531869608134, guid: 79e066eb1a557a745b9fbd33e1419c96, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -558,6 +558,7 @@ GameObject:
   - component: {fileID: 4413090810143243247}
   - component: {fileID: 4413090810143243245}
   - component: {fileID: 4413090810143243246}
+  - component: {fileID: -9026811968242778259}
   m_Layer: 5
   m_Name: SingleUpgradePanel
   m_TagString: Untagged
@@ -624,3 +625,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-9026811968242778259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413090810143243240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc829e0a8c5f22446a9a9e77e7026d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _descriptions:
+  - 
+  - 
+  - 
+  _levels: 000000000000000000000000
+  _buyButton: {fileID: 4413090809855857430}
+  _buyButtonDesc:
+  - 
+  - 
+  - 
