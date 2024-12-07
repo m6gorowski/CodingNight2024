@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3cd552ada4a1d54a8a9d549a579a161
+guid: 63b31779e1e59d44da38611212c358f8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: IconHolderWhiteCutted
+  - name: Base210
     originalName: 
-    pivot: {x: 0.49999997, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 46
-      height: 23
-    spriteID: 4336f74f4e1efae4abef557b50857677
+      width: 180
+      height: 320
+    spriteID: 715d020634ff38e4ab5673ebb0c20db6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,21 +142,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1161476939
-    name: IconHolderWhiteCutted
+    guid: -1402316050
+    name: Base210
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: IconHolderWhiteCutted
+    - name: Base210
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
+        x: 0
         y: 0
-        width: 46
-        height: 23
-      spriteId: 4336f74f4e1efae4abef557b50857677
+        width: 180
+        height: 320
+      spriteId: 715d020634ff38e4ab5673ebb0c20db6
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -174,4 +174,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 48, y: 24}
+  canvasSize: {x: 180, y: 320}
