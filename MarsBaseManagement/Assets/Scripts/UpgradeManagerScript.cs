@@ -6,10 +6,8 @@ public class UpgradeManagerScript : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] _upgrades;
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private int[] _upgradeStates;
 
     // Update is called once per frame
     void Update()

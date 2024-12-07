@@ -393,6 +393,13 @@ MonoBehaviour:
   oxygenScoreText: {fileID: 1440327540}
   oilScoreText: {fileID: 1489941270}
   energyScoreText: {fileID: 230946049}
+  resourceIcons:
+  - {fileID: 263693383098153584, guid: 6fc4b5e3fd04c154f9ad972b6e4c5c17, type: 3}
+  - {fileID: -1879750127086808080, guid: 40b5d1fcbf02fb94f906a1fa8e0a4615, type: 3}
+  - {fileID: 7374650864013432318, guid: 32508cd1d874b2740b6722bb2e8bec01, type: 3}
+  - {fileID: -8820757757306640700, guid: 1348359d79697524b8581aa45beef1bf, type: 3}
+  upgradePrefab: {fileID: 4413090810143243240, guid: cd5f7bd2c9cb2b2499d12459559864e0, type: 3}
+  scrollView: {fileID: 286405588}
 --- !u!1 &286405586
 GameObject:
   m_ObjectHideFlags: 0
