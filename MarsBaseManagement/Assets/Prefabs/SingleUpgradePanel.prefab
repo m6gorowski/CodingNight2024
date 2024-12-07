@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4413090808966428868}
   - component: {fileID: 4413090808966428869}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New water filter
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40993010c4731ad44a88dfb326e87ce8, type: 2}
   m_sharedMaterial: {fileID: 6802519210732943329, guid: 40993010c4731ad44a88dfb326e87ce8, type: 2}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 4413090809677448822}
   - component: {fileID: 4413090809677448823}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: H2O 0.5 L
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40993010c4731ad44a88dfb326e87ce8, type: 2}
   m_sharedMaterial: {fileID: 6802519210732943329, guid: 40993010c4731ad44a88dfb326e87ce8, type: 2}
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 263693383098153584, guid: 6fc4b5e3fd04c154f9ad972b6e4c5c17, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -558,7 +558,6 @@ GameObject:
   - component: {fileID: 4413090810143243247}
   - component: {fileID: 4413090810143243245}
   - component: {fileID: 4413090810143243246}
-  - component: {fileID: -9026811968242778259}
   m_Layer: 5
   m_Name: SingleUpgradePanel
   m_TagString: Untagged
@@ -625,25 +624,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-9026811968242778259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4413090810143243240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc829e0a8c5f22446a9a9e77e7026d19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _descriptions:
-  - 
-  - 
-  - 
-  _levels: 000000000000000000000000
-  _buyButton: {fileID: 4413090809855857430}
-  _buyButtonDesc:
-  - 
-  - 
-  - 
