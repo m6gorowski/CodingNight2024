@@ -280,6 +280,7 @@ public class PointsManagementScript : MonoBehaviour
                 return; // Exit if the resource is not found
             }
             playerResource.points -= cost;
+            resource.points = Mathf.Round(resource.points * 10.0f) * 0.1f;
         }
 
         // Upgrade has been purchased, so increment the resource's upgrade level

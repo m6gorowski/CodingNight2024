@@ -8,11 +8,6 @@ public class GameManagerScript : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Start()
-    {
-        NewGame();
-    }
-
     public void NewGame()
     {
         SceneManager.LoadScene("LevelMars");
